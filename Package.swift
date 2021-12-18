@@ -11,14 +11,12 @@ let package = Package(
     ],
     
     targets: [
-//        .target(
-//            name: "GLFW3",
-//            dependencies: []),
         .systemLibrary(
             name: "CGLFW3",
             pkgConfig: "glfw3",
             providers: [
-                .brew(["glfw"])
+                .brew(["glfw"]),
+                .apt(["libglfw3"])
             ]
         ),
     ]
